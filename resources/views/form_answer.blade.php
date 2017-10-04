@@ -1,29 +1,30 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>Laravel Form</title>
+@section('sidebar')
+    <div class="content">
 
-    </head>
-    </body>
-        <?php
-//            use App\form;
-
+        <table class="table table-striped table-hover well tablita">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
             $form_answ = App\form::all();
-
-            echo "<table>";
-            foreach ($form_answ as $form) {
-                echo "<tr>";
-                echo "<td>".$form->name."</td>";
-                echo "<td>".$form->surname."</td>";
-                echo "<td>".$form->age."</td>";
+            foreach ($form_answ as $form)  {
+                echo"<tr>";
+                    echo "<td>".$form->id."</td>";
+                    echo "<td>".$form->name."</td>";
+                    echo "<td>".$form->surname."</td>";
+                    echo "<td>".$form->age."</td>";
                 echo "</tr>";
             }
-            echo "</table>";
-
-        ?>
-    <body>
-</html>
+            ?>
+            </tbody>
+        </table>
+    </div>
+@endsection

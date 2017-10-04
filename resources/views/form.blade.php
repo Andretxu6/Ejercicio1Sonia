@@ -1,27 +1,41 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>Laravel Form</title>
+@section('sidebar')
+<!--    @parent-->
 
-    </head>
-    <body>
-        <form action="/formAnswer" method="post">
+    <div class="content">
+        <form  action="/formAnswer" method="post" class="form-horizontal well formulario">
             {!! csrf_field() !!}
-            Nombre: <input type="text" name="nombre" />
-            <br/>
-            <br/>
-            Apellido: <input type="text" name="apellido" />
-            <br/>
-            <br/>
-            Edad: <input type="number" name="edad" />
-            <br/>
-            <br/>
-            <input type="submit" name="submit" value="Enviar" />
+            <fieldset>
+                <legend>Form!</legend>
+                <div class="form-group">
+                    <label for="nombre" class="col-lg-2 control-label">Nombre</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="apellido" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="edad" class="col-lg-2 control-label">Edad</label>
+                    <div class="col-lg-10">
+                        <input type="number" class="form-control" id="edad" placeholder="Edad" name="edad">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
         </form>
+
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -32,6 +46,6 @@
                 </ul>
             </div>
         @endif
+    </div>
 
-    </body>
-</html>
+@endsection
