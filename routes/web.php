@@ -19,6 +19,8 @@ Route::get('/form', function () {
     return view('form');
 });
 
-Route::post('/formAnswer', function () {
+Route::post('/formAnswer', 'form@storeInDb');
+
+Route::get('/formalito', function () {
     return view('form_answer');
 });

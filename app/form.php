@@ -10,4 +10,5 @@ class form extends Model
     protected $primaryKey = 'id';
     protected $fillable=array("name","surname","age");
 
+
 }

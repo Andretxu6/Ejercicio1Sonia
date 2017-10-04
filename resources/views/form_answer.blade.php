@@ -10,13 +10,7 @@
     </head>
     </body>
         <?php
-            use App\form;
-            $user = new form;
-            $user->name = $_POST['nombre'];
-            $user->surname = $_POST['apellido'];
-            $user->age = $_POST['edad'];
-            $user->save();
-
+//            use App\form;
 
             $form_answ = App\form::all();
 
