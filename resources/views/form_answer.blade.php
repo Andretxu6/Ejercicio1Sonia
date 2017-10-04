@@ -1,6 +1,6 @@
-@extends('master')
+@extends('fijas.master')
 
-@section('sidebar')
+@section('content')
     <div class="content">
 
         <table class="table table-striped table-hover well tablita">

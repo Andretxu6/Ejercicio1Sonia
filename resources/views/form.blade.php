@@ -1,6 +1,6 @@
-@extends('master')
+@extends('fijas.master')
 
-@section('sidebar')
+@section('content')
 <!--    @parent-->
 
     <div class="content">
