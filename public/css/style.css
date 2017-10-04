@@ -10,3 +10,11 @@
     max-width: 790px;
     margin: auto;
 }
+.required:after {
+    content:"*";
+    color: #e74c3c;
+}
+.errores{
+    max-width: 1054px;
+    margin: auto;
+}

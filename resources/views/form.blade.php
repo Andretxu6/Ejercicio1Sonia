@@ -9,19 +9,19 @@
             <fieldset>
                 <legend>Form!</legend>
                 <div class="form-group">
-                    <label for="nombre" class="col-lg-2 control-label">Nombre</label>
+                    <label for="nombre" class="col-lg-2 control-label required">Nombre</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="apellido" class="col-lg-2 control-label">Password</label>
+                    <label for="apellido" class="col-lg-2 control-label required">Apellido</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="edad" class="col-lg-2 control-label">Edad</label>
+                    <label for="edad" class="col-lg-2 control-label required">Edad</label>
                     <div class="col-lg-10">
                         <input type="number" class="form-control" id="edad" placeholder="Edad" name="edad">
                     </div>
@@ -38,7 +38,8 @@
 
 
         @if ($errors->any())
-            <div class="alert alert-danger">
+            <br/>
+            <div class="alert alert-danger errores">
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
